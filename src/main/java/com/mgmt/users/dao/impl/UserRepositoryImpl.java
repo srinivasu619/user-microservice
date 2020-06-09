@@ -1,5 +1,6 @@
 package com.mgmt.users.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.LongStream;
@@ -15,6 +16,7 @@ public class UserRepositoryImpl implements UserRepository {
     private List<User> users;
 
     public UserRepositoryImpl() {
+        this.users = new ArrayList<>();
         LongStream.range(1, 3).forEach(userId -> {
             User user = new User();
             user.setUserId(userId);
