@@ -7,6 +7,9 @@ import java.util.stream.LongStream;
 import com.mgmt.users.dao.UserRepository;
 import com.mgmt.users.models.User;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     private List<User> users;
