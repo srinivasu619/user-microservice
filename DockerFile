@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine
+EXPOSE 4000
+COPY target/users-*.jar users.jar
+ENTRYPOINT ["java","-jar","/users.jar"]
